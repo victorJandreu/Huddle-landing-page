@@ -1,0 +1,114 @@
+@use '../util' as u;
+
+footer{
+    background: var(--dark-cyan);
+    padding-top: 10rem;
+    text-align: left;
+
+    & .logo{
+        width: 150px;
+        margin-bottom: 2rem;
+    }
+ 
+
+    & .footer-flex{
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(10);
+        color: hsla(193, 100%, 96%, .8);
+     
+
+        &__first{
+            display: grid;
+            gap: u.rem(10);
+            margin-bottom: 1rem;
+
+            & div{
+                display: flex;
+                align-items: flex-start;
+                gap: u.rem(25);
+    
+                & img{
+                    width: auto;
+                    padding-top: .3rem;
+                }
+    
+                & p{
+                    font-size: 1rem;
+                    max-width: 350px;
+                }
+              }
+          }
+
+        & nav{
+            & ul{
+                list-style: none;
+                padding: 0;
+                display: grid;
+                gap: u.rem(10);
+                margin: 0;
+
+                & a{
+                    color: hsla(193, 100%, 96%, .8);
+                    display: block;
+                    width: max-content;
+                }
+            }            
+        }
+
+        &__last{
+            margin-top: 2rem;
+            text-align: center;
+
+            &__media{
+                display: flex;
+                justify-content: center;
+                gap: u.rem(30);
+
+               & div{
+                border: 2px solid hsla(193, 100%, 96%, .8);
+                width: 35px;
+                height: 35px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+               }
+
+               & div:hover{
+                border: 2px solid var(--pink);
+
+                & i{
+                  color: var(--pink);
+                }
+               }
+            }
+
+            & p{
+                margin-top: 2rem;
+                font-size: .9rem;
+            }
+        }
+      
+        @include u.breakpoints(medium){
+          flex-direction: row;
+          justify-content: space-between;
+        gap: 2rem;
+
+          &__last{
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+ 
+
+            &__media{
+              justify-content: flex-start;
+              gap: u.rem(10);
+            }
+          }
+        }
+    }
+}

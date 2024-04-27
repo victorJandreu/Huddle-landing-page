@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// font-size: rem(16) === 1rem
+@function rem($pixel){
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + rem;}
+    @else{
+        @error 'No uses unidades como px cuando uses rem() function solo numero';} 
+}
+
+@function em($pixel){
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + em;}
+    @else{
+        @error 'No uses unidades como px cuando uses em() function solo numero';} 
+}

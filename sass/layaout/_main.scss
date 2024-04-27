@@ -1,0 +1,70 @@
+@use '../util' as u;
+
+
+
+main{
+  margin-block: 4rem;
+
+  & section > div,
+  & .bottom{
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--grayish-blue);
+    padding: 1rem;
+    background-color: white;
+  }
+
+  & .beneficts{
+    display: grid;
+    gap: u.rem(30);
+
+    & > div{      
+      h2{
+        margin-top: 3rem;
+      }
+      
+      p{
+        font-size: 1rem;
+        color: var(--grayish-blue);
+      }
+
+      @include u.breakpoints(medium){
+        display: flex;
+        gap: u.rem(30);
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem;
+
+        & img{
+          width: 40%;
+        }
+
+        & p{
+          max-width: 450px;
+        }
+
+        &:first-child,
+        &:last-child{
+          display: flex;
+          & img{
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+
+  & .bottom{
+    position: relative;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+  }
+
+}
+
+
+
+
+

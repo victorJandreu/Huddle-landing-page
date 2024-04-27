@@ -1,0 +1,57 @@
+@use'../util' as u;
+
+//  font-size: clamp(u.rem(28), u.rem(16) + 3vw, u.rem(40));
+
+h1,
+h2,
+h3{
+    margin-top: 0;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+h1, 
+h2{
+    font-family: var(--font-600);
+    color: var(--dark-cyan);
+}
+
+p{
+    font-family: var(--font-400-700);
+    margin-top: 0;
+   
+}
+
+button{
+    font-weight: 700;
+    font-family: var(--font-400-700);
+    cursor: pointer;
+}
+
+.pink{
+    background: var(--pink);
+    border: none;
+    width: 70%;
+    padding-block: .8rem;
+    border-radius: 30px;
+    color: var(--pale-cyan);
+    font-size: .9rem;
+    max-width: 300px;
+}
+
+.pink:hover{
+    opacity: .5;
+}
+
+a,
+a:visited,
+a:active{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+}
